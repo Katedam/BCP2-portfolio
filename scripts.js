@@ -10,3 +10,15 @@ portfolioData.push(new Project("images/studio-portfolio-thumbnail", "This is imp
 portfolioData.push(new Project("images/salmon-cookies-thumbnail", "This is information about this project and what aspects are important", "https://github.com/Katedam/cookie-store"));
 portfolioData.push(new Project("images/market-analysis-thumbnail", "This is information and hightlights about this project", "https://github.com/Katedam/market-analysis-app"));
 
+var portfolio = document.getElementById('portfolio');
+var displayProjects = function() {
+    if (portfolio !== null) {
+        for (var i = 0; i < portfolioData; i++) {
+            var link = document.createElement
+        }
+    }
+}
+
+$(document).ready(() => {
+
+})
