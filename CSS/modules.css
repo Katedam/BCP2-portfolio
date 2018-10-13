@@ -5,11 +5,24 @@
     width: 120%;
     display: block;
 }
+.header-span-img {
+    position: relative;
+    bottom: -10%;
+    width: 100vw;
+    z-index: -10;
+}
 @media only screen and (min-width: 400px) {
     .header-img {
         position: static;
-        margin: 5em auto;
-        width: 60%;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .header-span-img {
+        position: relative;
+        bottom: 20%; 
+        box-shadow: 10px 0 10px -4px rgb(232, 234, 227);      
+        width: 100vw;
+        z-index: -10;
     }
 }
 @media only screen and (min-width: 930px) {
@@ -17,6 +30,11 @@
         position: static;
         margin: 2em auto;
         width: 60%;
+    }
+    .header-span-img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 }
 .scroll-arrow {
@@ -27,7 +45,7 @@
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
-    margin-top: 15%;
+    margin-top: 0;
     padding: 3px;
     transform: rotate(45deg);
 }
@@ -45,9 +63,12 @@
     }
     #portfolio {
         position: absolute;
-        left: 50vw;
+        left: 51vw;
         top: 0;
-        width: 47vw;
+        display: flex;
+        flex-wrap: wrap;
+        vertical-align: top;
+        width: 46vw;
     }
 }
 .hide {
@@ -66,6 +87,11 @@
     border-radius: 50%;
     height: 2em;
     width: 2em;
+}
+@media only screen and (min-width: 930px) {
+    .arrow-container {
+        display: none;
+    }
 }
 .arrow {
     border: solid black;
@@ -96,13 +122,16 @@
 }
 @media only screen and (min-width: 930px) {
     .social-links {
-        background-color: white;
+        background-color: transparent;
         position: fixed;
         bottom: 0;
         margin: 0;
-        left: 0;
+        left: -2%;
         padding: 0;
         width: 49vw;
+    }
+    .arrow.down {
+        display: none;
     }
 }
 .social-icons {

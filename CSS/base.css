@@ -14,8 +14,9 @@ header {
         position: fixed;
         top: 0;
         left: 0;
+        box-shadow: 10px 0 10px -4px rgb(232, 234, 227);
         height: 100vh;
-        width: 49vw;
+        width: 50vw;
     }
 }
 header h2 {
@@ -47,16 +48,29 @@ h4 {
     display: block;
     position: relative;
     text-decoration: none;
-}
-section a img {
     margin-bottom: 1em;
     width: 100%;
 }
 p {
-    background-color: rgb(251, 227, 202);
+    box-sizing: border-box;
     margin: 0 0 0.5em 0;
     padding: 1em;
 }
+@media only screen and (min-width: 930px) {
+    p.hide {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: whitesmoke;
+        display: inline-block;
+        width: 42%;
+        padding: 1%;
+    }
+}
+/* #portfolio {
+    background-image: linear-gradient(to left, white, rgb(232, 234, 227));
+} */
+
 @media only screen and (min-width: 400px) {
     #portfolio {
         background-color: white;
@@ -70,8 +84,13 @@ p {
     }
 }
 @media only screen and (min-width: 930px) {
-    .project-thumbnail {
-        background-color: rgb(243, 255, 138);
+    .project-thumbnail {  
+        left: 0%;
+        padding: 0;
+        width: 50%;
+        margin: 0 1% 1% 1%;
+    }
+    .project-thumbnail img {
         width: 100%;
     }
 }
