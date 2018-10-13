@@ -13,25 +13,14 @@ portfolioData.push(new Project("images/market-analysis-thumbnail.jpg", "This is 
 
 $(document).ready(() => {
     displayProjects = function() {
-        var portfolio = document.getElementById('portfolio');
-        var link = document.createElement('a');
-        var img = document.createElement('img');
-        var blurb = document.createElement('p');
-        for (var i = 0; i < portfolioData.length; i++) {
-            link = document.createElement('a');
-            link.setAttribute('href', portfolioData[i].link);
-            link.setAttribute('class', 'project-thumbnail');
-            img = document.createElement('img');
-            img.setAttribute('src', portfolioData[i].thumbnail);
-            img.setAttribute('atl', portfolioData[i].alt);
-            link.appendChild(img);
-            portfolio.appendChild(link);
-            blurb = document.createElement('p');
-            blurb.setAttribute('class', 'info hide');
-            blurb.innerText = portfolioData[i].blurb;
-            portfolio.appendChild(blurb);
-            console.log(portfolio);
-        }
+    for (var i = 0; i < portfolioData.length; i++) {
+        $newProjectLink = $('<a href="' + portfolioData[i].link + '" class="project-thumbnail"><img src="' + portfolioData[i].thumbnail + '" alt="' + portfolioData[i].alt + '"></a>');
+        console.log($newProjectLink)
+        $('#portfolio').append($newProjectLink);
+        $newProjectInfo = $('<p>' + portfolioData[i].blurb + '</p>').addClass('info hide');
+        $('#portfolio').append($newProjectInfo);
     }
+}
     displayProjects();
 })
+
