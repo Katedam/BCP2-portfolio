@@ -1,7 +1,7 @@
-var Project = function(thumbnail, blurb, link, alt) {
+var Project = function(thumbnail, blurb, route, alt) {
     this.thumbnail = thumbnail;
     this.blurb = blurb;
-    this.route = link;
+    this.route = route;
     this.alt = alt;
 }
 
@@ -14,7 +14,7 @@ portfolioData.push(new Project("images/market-analysis-thumbnail.jpg", "This is 
 $(document).ready(() => {
     displayProjects = function() {
     for (var i = 0; i < portfolioData.length; i++) {
-        $newProjectLink = $('<a href="' + portfolioData[i].link + '" class="project-thumbnail"><img src="' + portfolioData[i].thumbnail + '" alt="' + portfolioData[i].alt + '"></a>');
+        $newProjectLink = $('<a href="' + portfolioData[i].route + '" class="project-thumbnail"><img src="' + portfolioData[i].thumbnail + '" alt="' + portfolioData[i].alt + '"><div class="arrow-container"><span class="arrow down"></span></div></a>');
         console.log($newProjectLink)
         $('#portfolio').append($newProjectLink);
         $newProjectInfo = $('<p>' + portfolioData[i].blurb + '</p>').addClass('info hide');
@@ -22,5 +22,9 @@ $(document).ready(() => {
     }
 }
     displayProjects();
+
+    $('.arrow-container').on('click', () => {
+        $('.info').show();
+    })
 })
 

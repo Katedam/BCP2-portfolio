@@ -1,0 +1,33 @@
+/*============== DEFAULT MOBILE LAYOUT*/
+.social-links {
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social {
+    display: inline-block;
+    width: 100%;
+}
+.social-icons {
+    width: 10vw;
+}
+
+/*================== MIN-WIDTH 400px*/
+@media only screen and (min-width: 400px) {
+    .social-icons {
+        width: 2em;
+    }
+}
+
+/*================ MIN-WIDTH 930px*/
+@media only screen and (min-width: 930px) {
+    .social-links {
+        background-color: transparent;
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        left: 0;
+        padding: 0;
+        width: 49vw;
+    }
+}
