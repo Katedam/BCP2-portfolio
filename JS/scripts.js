@@ -1,11 +1,14 @@
-var Project = function(thumbnail, blurb, route, alt) {
-    this.thumbnail = thumbnail;
-    this.blurb = blurb;
-    this.route = route;
-    this.alt = alt;
+var Project = function(projectObj) {
+    this.thumbnail = projectObj.thumbnail;
+    this.blurb = projectObj.blurb;
+    this.url = projectObj.url;
+    this.alt = projectObj.alt;
 }
 
 var portfolioData = [];
+
+portfolioData.foreach(function(project)
+
 portfolioData.push(new Project("images/jam-time-thumbnail.jpg", "This is information about Jam time and the important aspect of the application", "https://github.com/Katedam/Jam-Time", "Thumbnail showing the homepage for the site 'Jame Time'"));
 portfolioData.push(new Project("images/studio-portfolio-thumbnail.jpg", "This is important information about my personal art portfolio site", "https://github.com/Katedam/Studio-Portfolio-Site", "Thumbnail showing the homepage for Kate Dameron's Art Portfolio site"));
 portfolioData.push(new Project("images/salmon-cookies-thumbnail.jpg", "This is information about this project and what aspects are important", "https://github.com/Katedam/cookie-store", "Thumbnail showing the homepage for Pat's Cookies and Coffee Shop"));
