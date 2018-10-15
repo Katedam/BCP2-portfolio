@@ -19,7 +19,6 @@ Project.prototype.toHtml = function() {
         });
     $newProject.children('a').attr('src', this.url).text('+');
     $newProject.children('p').text(this.blurb);
-
     return $newProject;    
 }
 
