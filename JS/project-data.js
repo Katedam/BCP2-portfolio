@@ -1,3 +1,5 @@
+'use strict';
+
 var projectData = [
     {
         thumbnail: "images/jam-time-thumbnail.jpg",
