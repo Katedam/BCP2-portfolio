@@ -1,4 +1,6 @@
-
+.template {
+    display: none;
+}
 .project-thumbnail {
     display: block;
     position: relative;
