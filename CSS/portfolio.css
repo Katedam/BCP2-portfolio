@@ -46,7 +46,7 @@
 }
 
 /*================ MIN-WIDTH 930px*/
-@media only screen and (min-width: 930px) {
+/* @media only screen and (min-width: 930px) {
     #portfolio {
         position: absolute;
         left: 51vw;
@@ -75,10 +75,10 @@
         padding: 1%;
     }
 }
-
+ */
 
 /*=================ARROWS*/
-
+/* 
 .arrow-container {
     position: absolute;
     right: 0.5em;
@@ -125,4 +125,4 @@
     .arrow.down {
         display: none;
     }
-}
+} */
