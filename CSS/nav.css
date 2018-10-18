@@ -1,15 +1,82 @@
-nav.nav-menu {
+.icon {
     position: absolute;
     top: 0;
-    padding: 5px;
+    left: 0;
+    margin: 6px;
+}
+/* .hidden {
+    display: none;
+} */
+.nav-menu {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    background-color: #fd7554;
+    color: #262037;
+    width: 50%;
+    height: 50vh;
+    border: 3px solid #262037;
+    box-shadow: inset 0 0 5px black;
+}
+h2.nav-header {
+    font-size: 2em;
+    background-color: #fd7554;
+    color: #262037;
+    /* border-top: 3px solid #262037; */
+    border-bottom: 3px solid #262037;
+    /* box-shadow: 0 0 5px black; */
+}
+h2.nav-footer {
+    background-color: #262037;
+    color: #fd7554;
+    box-shadow: 0 0 0px black;
+    position: absolute;
+    bottom: 4px;
+    right: 5px;
+    font-size: 1.5em;
+    width: 95%;
+    padding-left: 77px;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    transform: rotate(-90deg);
+    font-size: 3em;
+    margin-top: 3em;
+}
+li:nth-of-type(2) {
+    padding-left: 1.5em;
+}
+a:hover {
+    transform: rotate(90deg);
+}
+.nav-menu a {
+    text-decoration: none;
     color: #262037;
 }
-.nav-menu h2{
-    position: relative;
-    left: 0;
-    margin: 0;
-    background-color: #262037;
-    color: #f8764c;
-    font-weight: bold;
-    padding: 0.1em;
+
+@media only screen and (min-width: 930px) {
+    .icon {
+        display: none;
+    }
+    nav.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        padding: 5px;
+        color: #262037;
+    }
+    .nav-menu li {
+        display: inline-block;
+    }
+    .nav-menu h2{
+        position: relative;
+        left: 0;
+        margin: 0;
+        background-color: #262037;
+        color: #f8764c;
+        font-weight: bold;
+        padding: 0.1em;
+    }  
 }
+

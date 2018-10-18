@@ -33,3 +33,7 @@ projectData.forEach(function(project){
 portfolioData.forEach(function(addProject){
     $('#portfolio').append(addProject.toHtml());
 })
+
+$(document).ready(function() {
+
+});
