@@ -1,0 +1,15 @@
+nav.nav-menu {
+    position: absolute;
+    top: 0;
+    padding: 5px;
+    color: #262037;
+}
+.nav-menu h2{
+    position: relative;
+    left: 0;
+    margin: 0;
+    background-color: #262037;
+    color: #f8764c;
+    font-weight: bold;
+    padding: 0.1em;
+}
