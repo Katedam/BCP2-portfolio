@@ -40,15 +40,20 @@ var Project = function(projectObj) {
 };
 
 Project.prototype.toHtml = function() {
-    var $newProject = $('div.template').clone();
-    $newProject.removeClass('template');
-    $newProject.children('img').attr({
-            'src': this.thumbnail,
-            'alt':  this.alt
-        });
-    $newProject.children('a').attr('src', this.url).text('+');
-    $newProject.children('p').text(this.blurb);
-    return $newProject;    
+    var templateFiller = Handlebars.compile($('#project-template').html() );
+    console.log(templateFiller);
+    var filledTemplate = templateFiller(this);
+    return filledTemplate;
+
+    // var $newProject = $('div.template').clone();
+    // $newProject.removeClass('template');
+    // $newProject.children('img').attr({
+    //         'src': this.thumbnail,
+    //         'alt':  this.alt
+    //     });
+    // $newProject.children('a').attr('src', this.url).text('+');
+    // $newProject.children('p').text(this.blurb);
+    // return $newProject;    
 }
 
 projectData.sort(function(a,b){
