@@ -1,6 +1,11 @@
 .template {
     display: none;
 }
+#portfolio {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+}
 .project-thumbnail {
     display: block;
     position: relative;
@@ -11,16 +16,10 @@
 .project-thumbnail img {
     width: 100%;
 }
-.portfolio p {
+#portfolio p {
     box-sizing: border-box;
     margin: 0 0 0.5em 0;
     padding: 1em;
-}
-/* #portfolio {
-    background-image: linear-gradient(to left, white, rgb(232, 234, 227));
-} */
-.hide {
-    display: none;
 }
 .show {
     padding: 3px;
@@ -31,7 +30,6 @@
 /*================== MIN-WIDTH 400px*/
 @media only screen and (min-width: 400px) {
     #portfolio {
-        background-color: white;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
