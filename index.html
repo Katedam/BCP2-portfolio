@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="CSS/portfolio.css">
     <link rel="stylesheet" href="CSS/social.css">
     <link rel="stylesheet" href="CSS/nav.css">
+
+    <script id="project-template" type="text/x-handlebars-template">
+        <div data-category="github-repo">
+            <img src={{thumbnail}} alt={{alt}}>
+            <a href={{url}}>See code</a>
+            <span>{{date}}</span>
+            <p>{{blurb}}</p>
+        </div>
+    </script>
 </head>
 <body>
     <header>
@@ -26,15 +35,8 @@
         </ul>
         <h2 class="nav-footer">DAMERON.</h2>
     </nav>
-    <!-- <section id="portfolio">
-        <!-- <h4><span class="arrow right"></span>work</h4> -->
-        <!-- <div class="template">
-            <img src="" alt="">
-            <a href=""></a>
-            <p></p>
-        </div>
-    </section> -->
-    <!-- <section class="social-links">
+    <section id="portfolio"></section>
+    <section class="social-links">
         <a class="social" href="mailto:hello@katedameron.com">
             <img class="social-icons" src="images/if_mail_email_envelope_send_message_1011335.png" alt="envelope icon to connect via email">
         </a>
@@ -53,8 +55,9 @@
         <a class="social" href="https://www.facebook.com/katejohnsondameron">
             <img class="social-icons" src="images/if_online_social_media_facebook_734386.png" alt="Facebook icon to connect via facebook">
         </a>  
-    </section> -->
+    </section>
     <script src="JS/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script type="text/javascript" src="JS/project-data.js"></script>
     <script type="text/javascript" src="JS/scripts.js"></script>
 </body>
