@@ -3,24 +3,29 @@
     margin: 1em 0;
     display: flex;
     justify-content: space-evenly;
+    z-index: 5;
 }
 .social {
     display: inline-block;
     width: 100%;
+    max-width: 20px;
 }
 .social-icons {
-    width: 10vw;
+    width: 100%;
 }
 
+/* .social-active {
+    display: block;
+} */
 /*================== MIN-WIDTH 400px*/
-@media only screen and (min-width: 400px) {
+/* @media only screen and (min-width: 400px) {
     .social-icons {
         width: 2em;
     }
-}
+} */
 
 /* ================ MIN-WIDTH 930px */
-@media only screen and (min-width: 930px) {
+/* @media only screen and (min-width: 930px) {
     .social-links {
         background-color: transparent;
         position: fixed;
@@ -30,4 +35,4 @@
         padding: 0;
         width: 49vw;
     }
-}
+} */

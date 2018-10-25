@@ -14,17 +14,18 @@ function menuHide() {
     $('.nav-menu').css('width', '0');
 }
 
-function navActive() {
-    $(this).addClass('active');
-    if ($(this).data('content','social')) {
-        $('.social-links').show();
-    }
+function navActive(event) {
+    $('.social-links').show();
+    event.stopPropagation();
+    // if ($(this).data('content','social')) {
+    //     $('.social-links').show();
+    // }
 }
 
-function navReset() {
-    $(this).removeClass('active');
-    $('.social-links').hide();
-}
+// function navReset() {
+//     $(this).removeClass('active');
+//     $('.social-links').hide();
+// }
 
 function showPortfolio() {
     if ($(this).data('content', 'portfolio')) {
@@ -75,8 +76,8 @@ portfolioData.forEach(function(addProject){
 $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
     $('.closebtn').on('click', menuHide);
-    $('.nav-menu').on('click', 'li', navActive);
-    $('.nav-menu').on('mouseleave', 'li', navReset);
+    $('.social a').on('click', navActive);
+    // $('.nav-menu').on('mouseleave', 'li', navReset);
     $('.nav-menu').on('click', 'li', showPortfolio);
     hideSections();
 });
