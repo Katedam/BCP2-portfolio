@@ -1,26 +1,32 @@
 /*============== DEFAULT MOBILE LAYOUT*/
 .social-links {
-    margin: 1em 0;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 0;
 }
 .social {
     display: inline-block;
     width: 100%;
+    max-width: 60px;
+    margin-top: 15%;
 }
 .social-icons {
-    width: 10vw;
+    width: 100%;
 }
 
+/* .social-active {
+    display: block;
+} */
 /*================== MIN-WIDTH 400px*/
-@media only screen and (min-width: 400px) {
+/* @media only screen and (min-width: 400px) {
     .social-icons {
         width: 2em;
     }
-}
+} */
 
 /* ================ MIN-WIDTH 930px */
-@media only screen and (min-width: 930px) {
+/* @media only screen and (min-width: 930px) {
     .social-links {
         background-color: transparent;
         position: fixed;
@@ -30,4 +36,4 @@
         padding: 0;
         width: 49vw;
     }
-}
+} */

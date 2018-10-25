@@ -6,21 +6,31 @@ function hideSections() {
     $('#portfolio').hide();
 }
 
-function menuToggle() {
-    $('.nav-menu').toggle();
+function menuShow() {
+    $('.nav-menu').css('width', '100vw');
 }
 
-function navActive() {
-    $(this).addClass('active');
-    if ($(this).data('content','social')) {
-        $('.social-links').show();
-    }
+function menuHide() {
+    $('.nav-menu').css('width', '0');
 }
 
-function navReset() {
-    $(this).removeClass('active');
-    $('.social-links').hide();
+function navActive(event) {
+    $('.social-links').each(function(index){
+        $(this).delay(1000 * index).fadeIn();
+    });
+    $('.social-links').on('click', function() {
+        $(this).fadeOut(700);
+    });
+    event.stopPropagation();
+    // if ($(this).data('content','social')) {
+    //     $('.social-links').show();
+    // }
 }
+
+// function navReset() {
+//     $(this).removeClass('active');
+//     $('.social-links').hide();
+// }
 
 function showPortfolio() {
     if ($(this).data('content', 'portfolio')) {
@@ -69,9 +79,10 @@ portfolioData.forEach(function(addProject){
 })
 
 $(document).ready(function() {
-    $('.icon-menu').on('click', menuToggle);
-    $('.nav-menu').on('mouseover', 'li', navActive);
-    $('.nav-menu').on('mouseleave', 'li', navReset);
+    $('.icon-menu').on('click', menuShow);
+    $('.closebtn').on('click', menuHide);
+    $('.social-container a').on('click', navActive);
+    // $('.nav-menu').on('mouseleave', 'li', navReset);
     $('.nav-menu').on('click', 'li', showPortfolio);
     hideSections();
 });
