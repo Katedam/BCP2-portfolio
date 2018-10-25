@@ -15,7 +15,12 @@ function menuHide() {
 }
 
 function navActive(event) {
-    $('.social-links').show();
+    $('.social-links').each(function(index){
+        $(this).delay(1000 * index).fadeIn();
+    });
+    $('.social-links').on('click', function() {
+        $(this).fadeOut(700);
+    });
     event.stopPropagation();
     // if ($(this).data('content','social')) {
     //     $('.social-links').show();
