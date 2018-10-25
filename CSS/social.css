@@ -1,14 +1,15 @@
 /*============== DEFAULT MOBILE LAYOUT*/
 .social-links {
-    margin: 1em 0;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
-    z-index: 5;
+    justify-content: center;
+    padding: 0;
 }
 .social {
     display: inline-block;
     width: 100%;
-    max-width: 20px;
+    max-width: 60px;
+    margin-top: 15%;
 }
 .social-icons {
     width: 100%;

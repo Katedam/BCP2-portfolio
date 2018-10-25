@@ -76,7 +76,7 @@ portfolioData.forEach(function(addProject){
 $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
     $('.closebtn').on('click', menuHide);
-    $('.social a').on('click', navActive);
+    $('.social-container a').on('click', navActive);
     // $('.nav-menu').on('mouseleave', 'li', navReset);
     $('.nav-menu').on('click', 'li', showPortfolio);
     hideSections();
