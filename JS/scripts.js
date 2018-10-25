@@ -6,8 +6,12 @@ function hideSections() {
     $('#portfolio').hide();
 }
 
-function menuToggle() {
-    $('.nav-menu').toggle();
+function menuShow() {
+    $('.nav-menu').css('width', '100vw');
+}
+
+function menuHide() {
+    $('.nav-menu').css('width', '0');
 }
 
 function navActive() {
@@ -69,8 +73,9 @@ portfolioData.forEach(function(addProject){
 })
 
 $(document).ready(function() {
-    $('.icon-menu').on('click', menuToggle);
-    $('.nav-menu').on('mouseover', 'li', navActive);
+    $('.icon-menu').on('click', menuShow);
+    $('.closebtn').on('click', menuHide);
+    $('.nav-menu').on('click', 'li', navActive);
     $('.nav-menu').on('mouseleave', 'li', navReset);
     $('.nav-menu').on('click', 'li', showPortfolio);
     hideSections();
