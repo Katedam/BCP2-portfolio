@@ -2,9 +2,13 @@
     display: none;
 }
 #portfolio {
+    background-color: rgb(245, 247, 241);
     position: absolute;
-    top: 55%;
-    width: 100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 1em;
 }
 .project-thumbnail {
     display: block;
@@ -17,9 +21,25 @@
     width: 100%;
 }
 #portfolio p {
-    box-sizing: border-box;
-    margin: 0 0 0.5em 0;
     padding: 1em;
+}
+.more-info {
+    color: white;
+    position: relative;
+    top: 0;
+    background-color: #262037b0;
+    padding: 0.5em;
+    box-sizing: border-box;
+    height: 100%;
+    z-index: 5;
+}
+.more-info a{
+    text-decoration: none;
+    color: white;
+}
+.more-info span{
+    position: absolute;
+    right: 0;
 }
 .show {
     padding: 3px;
@@ -33,7 +53,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        padding: 1em;
     }
     .project-thumbnail {
         width: 45%;
@@ -76,8 +95,17 @@
  */
 
 /*=================ARROWS*/
-/* 
-.arrow-container {
+.arrow {
+    width: 1em;
+    height: 1em;
+    border: solid #262037;
+    border-width: 0 3px 3px 0;
+    margin: 0.5em 0 0.5em 75em;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+/* .arrow-container {
     position: absolute;
     right: 0.5em;
     bottom: 1.75em;
@@ -85,38 +113,38 @@
     border-radius: 50%;
     height: 2em;
     width: 2em;
-}
-.arrow {
+} */
+/* .arrow {
     border: solid black;
     border-width: 0 1px 1px 0;
     display: inline-block;
     margin-right: 5px;
     padding: 3px; 
-}
-.right {
+} */
+/* .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-}
-.down {
+} */
+/* .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-}
-.arrow.down {
+} */
+/* .arrow.down {
     position: absolute;
     top: 0.75em;
     left: 0.75em;
     border-color: white;
     border-width: 0 2px 2px 0;
-}
-@media only screen and (min-width: 400px) {
+} */
+/* @media only screen and (min-width: 400px) {
     .arrow-container {
         display: block;
     }
     .arrow.down {
         display: block;
     }
-}
-@media only screen and (min-width: 930px) {
+} */
+/* @media only screen and (min-width: 930px) {
     .arrow-container {
         display: none;
     }

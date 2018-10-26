@@ -4,10 +4,8 @@
     left: 0;
     margin: 6px;
     font-size: 1.5em;
+    z-index: 2;
 }
-/* .hidden {
-    display: none;
-} */
 .nav-menu {
     height: 100%;
     width: 0; 
@@ -20,8 +18,6 @@
     overflow-x: hidden;
     padding-top: 60px; 
     transition: 0.5s;
-    /* border: 3px solid #262037; */
-    /* box-shadow: inset 0 0 5px black; */
 }
 /* h2.nav-header {
     font-size: 2em;
