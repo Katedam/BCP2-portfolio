@@ -32,18 +32,21 @@ function showPortfolio() {
         $('#portfolio').show();
         $('.more-info').hide();
         $('.nav-menu').hide();
-        $('.arrow').on('click', showMoreInfo);
     }
 }
 
 function showMoreInfo() {
     const $arrow = $('.arrow');
-    $arrow.css('transform', 'rotate(-135deg)');
-    $('.more-info').slideDown();
-    $arrow.on('click', function(){
-        $('.more-info').slideUp();
-        $arrow.css('transform', 'rotate(45deg)');
-    })
+    if ($arrow.css('transform', 'rotate(45deg)')) {
+        console.log('in the if');
+        $('.more-info').slideDown();
+        $arrow.css('transform', 'rotate(-135deg)');
+        $arrow.on('click', function() {
+            console.log('in the function');
+            $arrow.css('transform', 'rotate(45deg)');
+            $('.more-info').slideUp(); 
+        });    
+    } 
 }
 
 $(document).ready(function() {
@@ -52,5 +55,6 @@ $(document).ready(function() {
     $('.social-container a').on('click', navActive);
     // $('.nav-menu').on('mouseleave', 'li', navReset);
     $('.nav-menu').on('click', 'li', showPortfolio);
+    $('.arrow').on('click', showMoreInfo);
     hideSections();
 });
