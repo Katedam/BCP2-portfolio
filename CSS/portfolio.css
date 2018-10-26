@@ -24,11 +24,18 @@
     padding: 1em;
 }
 .more-info {
-    color: #262037;
+    color: white;
+    position: relative;
+    top: 0;
+    background-color: #262037b0;
+    padding: 0.5em;
+    box-sizing: border-box;
+    height: 100%;
+    z-index: 5;
 }
 .more-info a{
     text-decoration: none;
-    color: #262037;
+    color: white;
 }
 .more-info span{
     position: absolute;
@@ -89,18 +96,15 @@
 
 /*=================ARROWS*/
 .arrow {
-    position: relative;
-    left: 10em;
     width: 1em;
     height: 1em;
-    border: solid black;
+    border: solid #262037;
     border-width: 0 3px 3px 0;
-    display: inline-block;
-    margin-top: 0.5em;
-    padding: 3px;
+    margin: 0.5em 0 0.5em 75em;
     transform: rotate(45deg);
     cursor: pointer;
 }
+
 /* .arrow-container {
     position: absolute;
     right: 0.5em;
