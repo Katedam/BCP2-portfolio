@@ -6,11 +6,14 @@
     <title>Kate Dameron</title>
     <link rel="stylesheet" href="CSS/main.css">
     <script id="project-template" type="text/x-handlebars-template">
-        <div data-category="github-repo">
+        <div class="project-thumbnail" data-category="github-repo">
             <img src={{thumbnail}} alt={{alt}}>
-            <a href={{url}}>See code</a>
-            <span>{{date}}</span>
-            <p>{{blurb}}</p>
+            <div class="arrow"></div>
+            <div class="more-info">
+               <a href={{url}}>See code</a>
+                <span>{{date}}</span>
+                <p>{{blurb}}</p> 
+            </div>
         </div>
     </script>
 </head>
