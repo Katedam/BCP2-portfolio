@@ -1,7 +1,9 @@
 'use strict';
 
-var portfolioData = [];
+//initiating the json object to hold the string data
+const portfolioData = {};
 
+//constructor function
 var Project = function(projectObj) {
     this.thumbnail = projectObj.thumbnail;
     this.blurb = projectObj.blurb;
@@ -10,6 +12,10 @@ var Project = function(projectObj) {
     this.date = projectObj.date;
 };
 
+//this array of 'all' projects is tracking directly on the constructor function
+Project.all = [];
+
+//this object prototype fills the template to show the projects
 Project.prototype.toHtml = function() {
     var templateFiller = Handlebars.compile($('#project-template').html() );
     console.log(templateFiller);
@@ -17,6 +23,7 @@ Project.prototype.toHtml = function() {
     return filledTemplate;   
 }
 
+//this sorts and pushes all of the data into new objects in the
 Project.loadAll = function(rawData) {
     rawData.sort(function(a,b){
         return (new Date(b.date))-(new Date(a.date));
@@ -29,21 +36,27 @@ Project.loadAll = function(rawData) {
 Project.fetchAll = function () {
     if (localStorage.rawData) {
         Project.loadAll(JSON.parse(localStorage.rawData));
+        portfolioData.initPortfolioPage();
     } else {
         function getJSON() {
             $.get('Data/project-data-json.json', showJson);
         } 
         getJSON();
         function showJson(response) {
-            console.log('retrieved json: ', response);
             localStorage.setItem('Projects', JSON.stringify(response));
             Project.loadAll(response);
+            portfolioData.initPortfolioPage();
         }
     }
-}
+};
 
+portfolioData.initPortfolioPage = function() {
+    Project.all.forEach(function(project) {
+        $('#portfolio').append(project.toHtml());
+    });
+    Project.loadAll();
+};
 
-
-portfolioData.forEach(function(addProject){
-    $('#portfolio').append(addProject.toHtml());
-})
+// portfolioData.forEach(function(addProject){
+//     $('#portfolio').append(addProject.toHtml());
+// });
