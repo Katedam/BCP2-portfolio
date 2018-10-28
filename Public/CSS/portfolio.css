@@ -100,7 +100,7 @@
     height: 1em;
     border: solid #262037;
     border-width: 0 3px 3px 0;
-    margin: 0.5em 0 0.5em 75em;
+    margin: 0.5em 0 0.5em .75em;
     transform: rotate(45deg);
     cursor: pointer;
 }
