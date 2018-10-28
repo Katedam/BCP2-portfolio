@@ -52,7 +52,6 @@ $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
     $('.closebtn').on('click', menuHide);
     $('.social-container a').on('click', navActive);
-    // $('.nav-menu').on('mouseleave', 'li', navReset);
     $('.nav-menu').on('click', 'li', showPortfolio);
     $('.arrow').on('click', toggleMoreInfo);
     hideSections();
