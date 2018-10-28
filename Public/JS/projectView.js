@@ -1,8 +1,5 @@
 'use strict';
 
-//initiating the json object to hold the string data
-const portfolioData = {};
-
 //constructor function
 var Project = function(projectObj) {
     this.thumbnail = projectObj.thumbnail;
@@ -27,6 +24,7 @@ Project.prototype.toHtml = function() {
 Project.loadAll = function(rawData) {
     rawData.sort(function(a,b){
         return (new Date(b.date))-(new Date(a.date));
+        //look up date constructor
     }); 
     rawData.forEach(function(project){
         Project.all.push(new Project(project));
@@ -36,22 +34,21 @@ Project.loadAll = function(rawData) {
 Project.fetchAll = function () {
     if (localStorage.rawData) {
         Project.loadAll(JSON.parse(localStorage.rawData));
-        portfolioData.initPortfolioPage();
+        Project.initPortfolioPage();
     } else {
         $.get('Data/project-data-json.json', showJson);
     } 
     function showJson(response) {
         localStorage.setItem('Projects', JSON.stringify(response));
         Project.loadAll(response);
-        portfolioData.initPortfolioPage();
+        Project.initPortfolioPage();
     }
 };
 
-portfolioData.initPortfolioPage = function() {
+Project.initPortfolioPage = function() {
     Project.all.forEach(function(project) {
         $('#portfolio').append(project.toHtml());
     });
-    Project.loadAll();
 };
 
 // portfolioData.forEach(function(addProject){

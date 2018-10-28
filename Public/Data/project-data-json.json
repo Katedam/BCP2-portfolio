@@ -4,7 +4,8 @@
         "url" : "https://github.com/Katedam/Jam-Time",
         "blurb" : "This is information about Jam time and the important aspect of the application",
         "alt" : "Thumbnail links to the github repository for the site 'Jame Time'",
-        "date" : "09/2018"
+        "date" : "09/2018",
+        "sort" : 201809
     },
     {
         "thumbnail" : "images/market-analysis-thumbnail.jpg",
