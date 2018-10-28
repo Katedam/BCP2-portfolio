@@ -38,15 +38,12 @@ Project.fetchAll = function () {
         Project.loadAll(JSON.parse(localStorage.rawData));
         portfolioData.initPortfolioPage();
     } else {
-        function getJSON() {
-            $.get('Data/project-data-json.json', showJson);
-        } 
-        getJSON();
-        function showJson(response) {
-            localStorage.setItem('Projects', JSON.stringify(response));
-            Project.loadAll(response);
-            portfolioData.initPortfolioPage();
-        }
+        $.get('Data/project-data-json.json', showJson);
+    } 
+    function showJson(response) {
+        localStorage.setItem('Projects', JSON.stringify(response));
+        Project.loadAll(response);
+        portfolioData.initPortfolioPage();
     }
 };
 
