@@ -1,6 +1,7 @@
 'use strict';
 
-//constructor function
+var portfolioData = [];
+
 var Project = function(projectObj) {
     this.thumbnail = projectObj.thumbnail;
     this.blurb = projectObj.blurb;
@@ -9,10 +10,8 @@ var Project = function(projectObj) {
     this.date = projectObj.date;
 };
 
-//this array of 'all' projects is tracking directly on the constructor function
 Project.all = [];
 
-//this object prototype fills the template to show the projects
 Project.prototype.toHtml = function() {
     var templateFiller = Handlebars.compile($('#project-template').html() );
     console.log(templateFiller);
@@ -51,6 +50,6 @@ Project.initPortfolioPage = function() {
     });
 };
 
-// portfolioData.forEach(function(addProject){
+// Project.forEach(function(addProject){
 //     $('#portfolio').append(addProject.toHtml());
-// });
+// })
