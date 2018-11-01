@@ -8,21 +8,23 @@ var Project = function(projectObj) {
     this.url = projectObj.url;
     this.alt = projectObj.alt;
     this.date = projectObj.date;
+    this.sort = projectObj.sort;
 };
 
 Project.all = [];
 
-Project.prototype.toHtml = function() {
-    var templateFiller = Handlebars.compile($('#project-template').html() );
+Project.prototype.toHtml = function(id) {
+    var templateFiller = Handlebars.compile($(id).html() );
     console.log(templateFiller);
     var filledTemplate = templateFiller(this);
     return filledTemplate;   
 }
 
+
 //this sorts and pushes all of the data into new objects in the
 Project.loadAll = function(rawData) {
     rawData.sort(function(a,b){
-        return (new Date(b.date))-(new Date(a.date));
+        return (new Date(a.sort))-(new Date(b.sort));
         //look up date constructor
     }); 
     rawData.forEach(function(project){
@@ -46,10 +48,7 @@ Project.fetchAll = function () {
 
 Project.initPortfolioPage = function() {
     Project.all.forEach(function(project) {
-        $('#portfolio').append(project.toHtml());
+        $('#portfolio').append(project.toHtml('#project-template'));
+        $('#modal-container').prepend(project.toHtml('#myModal'));
     });
 };
-
-// Project.forEach(function(addProject){
-//     $('#portfolio').append(addProject.toHtml());
-// })
