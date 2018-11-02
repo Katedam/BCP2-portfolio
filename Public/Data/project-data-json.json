@@ -5,7 +5,8 @@
         "blurb" : "This is information about Jam time and the important aspect of the application",
         "alt" : "Thumbnail links to the github repository for the site 'Jame Time'",
         "date" : "09/2018",
-        "sort" : 201809
+        "sort" : 201809,
+        "index" : "0"
     },
     {
         "thumbnail" : "images/market-analysis-thumbnail.jpg",
@@ -13,7 +14,9 @@
         "blurb" : "This is information and hightlights about this project",
         "alt" : "Thumbnail links to the github repository for this market analysis app",
         "date" : "08/2018",
-        "sort" : 201808
+        "sort" : 201808,
+        "index" : "1"
+
     },
     {
         "thumbnail" : "images/salmon-cookies-thumbnail.jpg",
@@ -21,7 +24,8 @@
         "blurb" : "This is information about Jam time and the important aspect of the application",
         "alt" : "Thumbnail links to the github repository for the Salmon Cookies Project",
         "date" : "08/2018",
-        "sort" : 201808
+        "sort" : 201808,
+        "index" : "2"
     },
     {
         "thumbnail" : "images/studio-portfolio-thumbnail.jpg",
@@ -29,6 +33,7 @@
         "blurb" : "This is important information about my personal art portfolio site",
         "alt" : "Thumbnail linking to the github repository for Kate Dameron's Art Portfolio site",
         "date" : "09/2018",
-        "sort" : 201809
+        "sort" : 201809,
+        "index" : "3"
     }
 ]

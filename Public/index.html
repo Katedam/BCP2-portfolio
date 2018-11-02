@@ -6,13 +6,10 @@
     <title>Kate Dameron</title>
     <link rel="stylesheet" href="CSS/main.css">
     <script id="project-template" type="text/x-handlebars-template">
-        <div class="project-thumbnail" data-category="github-repo">
-            <img src={{thumbnail}} alt={{alt}}>
-            <!-- <div class="arrow"></div> -->
-        </div>
+        <img id={{index}} class="project-thumbnail" src={{thumbnail}} alt={{alt}}>
     </script>
     <script id="myModal" type="text/x-handlebars-template">
-        <div class="my-portfolio">
+        <div class="my-portfolio" id={{index}}>
             <!-- <div class="numbertext">{{index}} / {{length}}</div> -->
             <img src={{thumbnail}} alt={{alt}}>
             <div class="more-info">

@@ -9,13 +9,13 @@ var Project = function(projectObj) {
     this.alt = projectObj.alt;
     this.date = projectObj.date;
     this.sort = projectObj.sort;
+    this.index = projectObj.index;
 };
 
 Project.all = [];
 
 Project.prototype.toHtml = function(id) {
     var templateFiller = Handlebars.compile($(id).html() );
-    console.log(templateFiller);
     var filledTemplate = templateFiller(this);
     return filledTemplate;   
 }
