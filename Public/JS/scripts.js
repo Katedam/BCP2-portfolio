@@ -47,39 +47,33 @@ function showPortfolio() {
 //         arrow = "down";
 //     } 
 // }
-function closeModal() {
-    $('#modal-container').css('display', 'none');
-}
 
 function openModal() {
     $('#modal-container').css('display', 'block');
-    showSlides(1);
+    const $projectList = $('.my-portfolio');
+    const id = $(this).data("project-id");
+    $(`#${id}`).fadeIn();
 }
 
-// function moveSlides(index) {
-//     showSlides(slideIndex )
+function closeModal() {
+    $('#modal-container').css('display', 'none');
+    $('.my-portfolio').hide();
+}
+
+// function showSlides(index) {
+//     const $slides = $('.my-portfolio');
+//     if (index > $slides.length) {
+//         slideIndex = 1;
+//     };
+//     if (index < 1) {
+//         slideIndex = $slides.length;
+//     };
+//     $slides.each(function(){
+//         $slides.css('display', 'none');
+//     });
+//     const $slideIndex = $(this);
+//     $slideIndex.show();
 // }
-
-function currentSlide(index) {
-    showSlides($slideIndex = index);
-}
-
-function showSlides(index) {
-    const $slides = $('.my-portfolio');
-    console.log($slides);
-    var id = $slides[index].id;
-    console.log(id);
-    if (index > $slides.length) {
-        slideIndex = 1;
-    };
-    if (index < 1) {
-        slideIndex = $slides.length;
-    };
-    $slides.each(function(){
-        $slides.css('display', 'none');
-    });
-    $('#' + id).show();
-}
 
 $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
@@ -87,12 +81,6 @@ $(document).ready(function() {
     $('.social-container a').on('click', navActive);
     $('.nav-menu').on('click', 'li', showPortfolio);
     $('.project-thumbnail').on('click', openModal);
-    $('.next').on('click', function() {
-        showSlides(slideIndex += 1);
-    });
-    $('.prev').on('click', function() {
-        showSlides(slideIndex -= 1);
-    })
     $('.close').on('click', closeModal);
     // $('.arrow').on('click', toggleMoreInfo);
     hideSections();

@@ -6,7 +6,7 @@
     <title>Kate Dameron</title>
     <link rel="stylesheet" href="CSS/main.css">
     <script id="project-template" type="text/x-handlebars-template">
-        <img id={{index}} class="project-thumbnail" src={{thumbnail}} alt={{alt}}>
+        <img data-project-id={{index}} class="project-thumbnail" src={{thumbnail}} alt={{alt}}>
     </script>
     <script id="myModal" type="text/x-handlebars-template">
         <div class="my-portfolio" id={{index}}>
@@ -59,8 +59,8 @@
     <section id="modal-container" class="modal">
         <span class="close cursor">&times;</span>
         <div class="modal-content">
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
+            <!-- <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a> -->
         </div>
     </section>
     <script src="JS/jquery-3.3.1.js"></script>
