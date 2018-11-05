@@ -30,7 +30,6 @@ function navActive(event) {
 function showPortfolio() {
     if ($(this).data('content', 'portfolio')) {
         $('#portfolio').show();
-        $('.more-info').hide();
         $('.nav-menu').hide();
     }
 }
@@ -51,8 +50,10 @@ function showPortfolio() {
 function openModal() {
     $('#modal-container').css('display', 'block');
     const $projectList = $('.my-portfolio');
+    $projectList.hide();
     const id = $(this).data("project-id");
     $(`#${id}`).fadeIn();
+
 }
 
 function closeModal() {
