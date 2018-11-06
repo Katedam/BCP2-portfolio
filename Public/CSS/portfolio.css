@@ -81,31 +81,27 @@
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-#portfolio p {
-    padding: 1em;
-}
 .my-portfolio {
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 .my-portfolio img{
     display: block;
     width: 60%;
 }
 .more-info {
-    color:  #262037b0;
-    position: relative;
+    color: #262037b0;
     top: 0;
     background-color: white;
     padding: 0.5em;
-    box-sizing: border-box;
-    /* height: 100%; */
-    width: 30%;
-    z-index: 5;
+}
+.more-info p{
+    padding-top: 10px;
 }
 .more-info a{
     text-decoration: none;
-    color: white;
+    color: #262037b0;
 }
 .more-info span{
     position: absolute;
