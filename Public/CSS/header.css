@@ -109,7 +109,19 @@ header h2 {
         display: none;
     } */
 }
-
+@media only screen and (min-width: 844px) {
+    .header-img {
+        display: inline;
+    }
+    .hello-img {
+        /* margin-left: 15%; */
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .hello-img {
+        margin-left: 15%;
+    }
+}
 
 
 
