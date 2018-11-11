@@ -72,9 +72,9 @@ $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
     $('.closebtn').on('click', menuHide);
     $('.social-container a').on('click', navActive);
-    $('.nav-menu').on('click', 'li', showSection);
+    // $('.nav-menu').on('click', 'li', showSection);
     $('.project-thumbnail').on('click', openModal);
     $('.close').on('click', closeModal);
     // $('.arrow').on('click', toggleMoreInfo);
-    initIndexPage();
+    // initIndexPage();
 });

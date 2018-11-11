@@ -20,13 +20,31 @@ header h2 p {
     position: relative;
     left: -15%;
     width: 110%;
-    opacity: 0;
-    transition: opacity 3s;
-    /* display: block; */
+    animation: image-fadeIn 3s;
 }
 .hello-img {
-    transition: width 3s;
-    width: 0;
+    animation: image-scale 3s;
+}
+
+@keyframes image-scale {
+    from {
+        transform: translateX(-140px) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform:translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes image-fadeIn {
+    from {
+        transform: translateX(-280px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 .header-span-img {
     position: fixed;

@@ -32,17 +32,17 @@ Project.loadAll = function(rawData) {
     });
 }
 
-Project.fetchAll = function () {
+Project.fetchAll = function (callback) {
     if (localStorage.rawData) {
         Project.loadAll(JSON.parse(localStorage.rawData));
-        Project.initPortfolioPage();
+        callback();
     } else {
         $.get('Data/project-data-json.json', showJson);
     } 
     function showJson(response) {
         localStorage.setItem('Projects', JSON.stringify(response));
         Project.loadAll(response);
-        Project.initPortfolioPage();
+        callback();
     }
 };
 
