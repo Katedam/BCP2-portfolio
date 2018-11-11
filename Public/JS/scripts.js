@@ -4,6 +4,7 @@ function initIndexPage() {
     $('.social-links').hide();
     $('#portfolio').hide();
     $('.hello-img').css('width', '25%');
+    $('.header-img').css('opacity', '1');
 }
 
 function menuShow() {
