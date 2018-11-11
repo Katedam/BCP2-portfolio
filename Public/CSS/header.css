@@ -18,6 +18,10 @@ header h2 {
     width: 110%;
     /* display: block; */
 }
+.hello-img {
+    transition: width 3s;
+    width: 0;
+}
 .header-span-img {
     position: fixed;
     bottom: -20%;

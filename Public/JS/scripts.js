@@ -1,8 +1,9 @@
 'use strict';
 
-function hideSections() {
+function initIndexPage() {
     $('.social-links').hide();
     $('#portfolio').hide();
+    $('.hello-img').css('width', '25%');
 }
 
 function menuShow() {
@@ -33,7 +34,7 @@ function showSection() {
         $('.nav-menu').css('width', '0');
         $('.icon-menu').on('click', menuShow);
     } else {
-        hideSections();
+        initIndexPage();
         menuHide();
     }
 }
@@ -87,5 +88,5 @@ $(document).ready(function() {
     $('.project-thumbnail').on('click', openModal);
     $('.close').on('click', closeModal);
     // $('.arrow').on('click', toggleMoreInfo);
-    hideSections();
+    initIndexPage();
 });
