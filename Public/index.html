@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-    <header>
+    <header class="">
         <img class="hello-img" src="images/hello.png" alt="A message saying, Hello I'm...">
         <img class="header-img" src="images/header-transparent.png" alt="A photo of Kate Dameron next to her name"> 
         <h2><strong>UX Designer, Web Developer & Artist.</strong>       
@@ -33,8 +33,8 @@
     <nav class="nav-menu">
         <a href="javascript:void(0)" class="closebtn">&times;</a>
         <ul>
-            <li data-content="home"><a href="#">Home</a></li>
-            <li data-content="portfolio"><a href="#">Projects</a></li>
+            <li data-content="home"><a href="/">Home</a></li>
+            <li data-content="portfolio"><a href="/portfolio">Projects</a></li>
             <li data-content="social" class="social-container">
                 <a href="#">Connect</a>
                 <ul class="social-links">
@@ -68,13 +68,18 @@
             <a class="next">&#10095;</a> -->
         </div>
     </section>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="JS/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script type="text/javascript" src="Data/project-data-json.json"></script>
     <script type="text/javascript" src="JS/projectView.js"></script>
     <script type="text/javascript" src="JS/scripts.js"></script>
-    <script>
+    <script type="text/javascript" src="JS/controllers/indexController.js"></script>
+    <script type="text/javascript" src="JS/controllers/portfolioController.js"></script>
+    <script typ="text/javascript" src="JS/route.js"></script>
+
+    <!-- <script>
         Project.fetchAll();
-    </script>
+    </script> -->
 </body>
 </html>
