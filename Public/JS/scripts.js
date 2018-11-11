@@ -40,19 +40,6 @@ function showSection() {
     }
 }
 
-// var arrow = "down";
-// function toggleMoreInfo(event) {
-//     const $arrow = $('.arrow');
-//     $(this).siblings('.more-info').slideToggle();
-//     if (arrow == "down") {
-//         $arrow.css('transform', 'rotate(-135deg)');
-//         arrow = "up";
-//     } else if (arrow == "up") {
-//         $arrow.css('transform', 'rotate(45deg)')
-//         arrow = "down";
-//     } 
-// }
-
 function openModal() {
     $('#modal-container').css('display', 'block');
     const $projectList = $('.my-portfolio');

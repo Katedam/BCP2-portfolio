@@ -30,19 +30,6 @@ header h2 {
     width: 100vw;
     z-index: -10;
 }
-/* .scroll-arrow {
-    position: relative;
-    left: 10em;
-    width: 3em;
-    height: 3em;
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    margin-top: 0;
-    padding: 3px;
-    transform: rotate(45deg);
-} */
-
 /*================== MIN-WIDTH 400px*/
 @media only screen and (min-width: 400px) {
     .header-img {
