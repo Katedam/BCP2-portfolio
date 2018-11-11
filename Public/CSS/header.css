@@ -5,11 +5,15 @@ header {
     width: 100vw; 
 }
 header h2 {
-    font-size: large;
+    font-size: 3em;
     margin: 30% 0 0 0;
-    padding: 0.5em;
-    text-align: left;
+    padding: 1em;
+    text-align: center;
     background-color: #262037;
+    color: whitesmoke;
+}
+header h2 p {
+    padding: 0.5em;
     color: #f8764c;
 }
 .header-img {
@@ -29,6 +33,7 @@ header h2 {
     bottom: -50%;
     width: 100vw;
     z-index: -10;
+    opacity: 0.8;
 }
 /*================== MIN-WIDTH 400px*/
 @media only screen and (min-width: 400px) {
