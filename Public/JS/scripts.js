@@ -1,8 +1,10 @@
 'use strict';
 
-function hideSections() {
+function initIndexPage() {
     $('.social-links').hide();
     $('#portfolio').hide();
+    $('.hello-img').css('width', '25%');
+    $('.header-img').css('opacity', '1');
 }
 
 function menuShow() {
@@ -27,25 +29,16 @@ function navActive(event) {
     event.stopPropagation();
 }
 
-function showPortfolio() {
-    if ($(this).data('content', 'portfolio')) {
+function showSection() {
+    if ($(this).data().content == 'portfolio') {
         $('#portfolio').show();
-        $('.nav-menu').hide();
+        $('.nav-menu').css('width', '0');
+        $('.icon-menu').on('click', menuShow);
+    } else {
+        initIndexPage();
+        menuHide();
     }
 }
-
-// var arrow = "down";
-// function toggleMoreInfo(event) {
-//     const $arrow = $('.arrow');
-//     $(this).siblings('.more-info').slideToggle();
-//     if (arrow == "down") {
-//         $arrow.css('transform', 'rotate(-135deg)');
-//         arrow = "up";
-//     } else if (arrow == "up") {
-//         $arrow.css('transform', 'rotate(45deg)')
-//         arrow = "down";
-//     } 
-// }
 
 function openModal() {
     $('#modal-container').css('display', 'block');
@@ -53,7 +46,6 @@ function openModal() {
     $projectList.hide();
     const id = $(this).data("project-id");
     $(`#${id}`).fadeIn();
-
 }
 
 function closeModal() {
@@ -80,9 +72,9 @@ $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
     $('.closebtn').on('click', menuHide);
     $('.social-container a').on('click', navActive);
-    $('.nav-menu').on('click', 'li', showPortfolio);
+    $('.nav-menu').on('click', 'li', showSection);
     $('.project-thumbnail').on('click', openModal);
     $('.close').on('click', closeModal);
     // $('.arrow').on('click', toggleMoreInfo);
-    hideSections();
+    initIndexPage();
 });

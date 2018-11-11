@@ -55,9 +55,6 @@
     text-decoration: none;
     cursor: pointer;
 }
-.my-portfolio {
-    display: none;
-}
 .prev,
 .next {
     cursor: pointer;
@@ -82,13 +79,11 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 .my-portfolio {
-    display: flex;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 .my-portfolio img{
-    display: block;
-    width: 60%;
+    width: 100%;
 }
 .more-info {
     color: #262037b0;
@@ -103,9 +98,9 @@
     text-decoration: none;
     color: #262037b0;
 }
-.more-info span{
-    position: absolute;
-    right: 0;
+.more-info span {
+    position: relative;
+    left: 68%;
 }
 .show {
     padding: 3px;
@@ -114,17 +109,21 @@
 }
 
 /*================== MIN-WIDTH 400px*/
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 600px) {
     #portfolio {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        align-items: flex-start;
     }
     .project-thumbnail {
         width: 45%;
     }
     .project-thumbnail img {
         width: 100%;
+    }
+    .my-portfolio {
+        width: 65%;
     }
 }
 

@@ -14,30 +14,22 @@ header h2 {
 }
 .header-img {
     position: relative;
-    top: 10%;
     left: -15%;
     width: 110%;
-    display: block;
+    opacity: 0;
+    transition: opacity 3s;
+    /* display: block; */
+}
+.hello-img {
+    transition: width 3s;
+    width: 0;
 }
 .header-span-img {
-    position: relative;
-    bottom: -10%;
+    position: fixed;
+    bottom: -50%;
     width: 100vw;
     z-index: -10;
 }
-.scroll-arrow {
-    position: relative;
-    left: 10em;
-    width: 3em;
-    height: 3em;
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    margin-top: 0;
-    padding: 3px;
-    transform: rotate(45deg);
-}
-
 /*================== MIN-WIDTH 400px*/
 @media only screen and (min-width: 400px) {
     .header-img {
@@ -49,8 +41,8 @@ header h2 {
         top: 15%;
     }
     .header-span-img {
-        position: relative;
-        bottom: 20%; 
+        position: fixed;
+        bottom: -20%; 
         box-shadow: 10px 0 10px -4px rgb(232, 234, 227);      
         width: 100vw;
         z-index: -10;
@@ -64,7 +56,7 @@ header h2 {
 }
 
 /*================ MIN-WIDTH 545px*/
-@media only screen and (min-width: 545px) {
+/* @media only screen and (min-width: 545px) {
     .header-img {
         width: 55%;
         right: 0;
@@ -74,10 +66,10 @@ header h2 {
         width: 100%;
         margin: 0;
     }
-}
+} */
 
 /* ================ MIN-WIDTH 930px*/
-@media only screen and (min-width: 930px) {
+@media only screen and (min-width: 630px) {
     /* header {
         position: fixed;
         top: 0;
@@ -86,14 +78,20 @@ header h2 {
         height: 100vh;
         width: 50vw;
     }*/
+    header {
+        margin: 4em auto;
+    }
     header h2 {
         /* position: static; */
         font-size: larger;
         /* width: 400px; */
     } 
     .header-img {
-        margin: 3em auto;
-        width: 400px;
+        margin: 0 auto;
+        width: 70%;
+        max-width: 500px;
+        left: 0;
+        display: block;
     }
     /* .header-span-img {
         position: absolute;
@@ -104,7 +102,19 @@ header h2 {
         display: none;
     } */
 }
-
+@media only screen and (min-width: 844px) {
+    .header-img {
+        display: inline;
+    }
+    .hello-img {
+        /* margin-left: 15%; */
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .hello-img {
+        margin-left: 15%;
+    }
+}
 
 
 
