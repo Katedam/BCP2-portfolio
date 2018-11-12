@@ -48,7 +48,6 @@ a.closebtn {
 }
 
 @media only screen and (min-width: 800px) {
-    
     .nav-menu {
         display: block;
         width: 10%;
@@ -58,6 +57,9 @@ a.closebtn {
         left: 0;
         background-color: #f9ddc3ad;
         padding-top: 5px;
+    }
+    .nav-color-change {
+        background-color: #262037;
     }
     #menu-arrow {
         display: inline-block;
@@ -80,12 +82,13 @@ a.closebtn {
         width: 20%;
     } */
     .nav-menu a {
+        padding: 8px 8px 8px 8px;
         text-decoration: none;
-        font-size: 2em;
+        font-size: 40px;
+        color: #fd7554;
         display: none;
         transition: 0.3s;
         text-align: center;
-        color: #f8764c;
     }
     .icon {
         display: none;

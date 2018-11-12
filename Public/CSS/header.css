@@ -6,7 +6,7 @@ header {
 }
 header h2 {
     font-size: 3em;
-    margin: 30% 0 0 0;
+    margin: 15% 0 0 0;
     padding: 1em;
     text-align: center;
     background-color: #262037;
@@ -18,12 +18,13 @@ header h2 p {
 }
 .header-img {
     position: relative;
-    left: -15%;
-    width: 110%;
+    left: -20%;
+    width: 124%;
     animation: image-fadeIn 3s;
 }
 .hello-img {
     animation: image-scale 3s;
+    float: left;
 }
 
 @keyframes image-scale {

@@ -10,13 +10,25 @@ function initIndexPage() {
 function menuShow() {
     if($('.nav-menu').css('width', '0')) {
         $('.nav-menu').css('width', '100vw');
+        $('.nav-menu ul a').css('display', 'block');
+        $('.nav-menu').addClass('nav-color-change');
+        $('.menu-arrow').hide();
+        $('.closebtn').show();
     } else {
         $('.nav-menu').css('width', '0')
     }    
 }
 
 function menuHide() {
-    $('.nav-menu').css('width', '0');
+    const $nav = $('.nav-menu');
+    if ($(window).width() < 800)  {
+        $nav.css('width', '0'); 
+    } else {
+        $nav.css('width', '10%');
+        $($nav, 'a').hide();
+        $nav.removeClass("nav-color-change");
+        $('.menu-arrow').show();
+    }
 }
 
 function navActive(event) {
@@ -70,6 +82,7 @@ function closeModal() {
 
 $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
+    $('#menu-arrow').on('click', menuShow);
     $('.closebtn').on('click', menuHide);
     $('.social-container a').on('click', navActive);
     $('.project-thumbnail').on('click', openModal);
