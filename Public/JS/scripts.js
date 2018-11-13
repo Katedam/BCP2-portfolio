@@ -23,6 +23,7 @@ function menuHide() {
     const $nav = $('.nav-menu');
     if ($(window).width() < 800)  {
         $nav.css('width', '0'); 
+        $('.icon-menu').show();
     } else {
         $nav.css('width', '10%');
         $($nav, 'a').hide();
@@ -32,13 +33,9 @@ function menuHide() {
 }
 
 function navActive(event) {
-    $('.social-links').each(function(index){
-        $(this).delay(1000 * index).fadeIn();
-    });
-    $('.social-links').on('click', function() {
-        $(this).fadeOut(700);
-    });
+    $('.social-links').toggleClass('show');
     event.stopPropagation();
+    event.preventDefault();
 }
 
 function showSection() {
@@ -80,6 +77,12 @@ function closeModal() {
 //     $slideIndex.show();
 // }
 
+function setupSocialIcons() {
+    $('.social-icons').each(function(index) {
+        $(this).css('transition-delay', (index * 0.15) + 's');
+    });
+}
+
 $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
     $('#menu-arrow').on('click', menuShow);
@@ -87,4 +90,5 @@ $(document).ready(function() {
     $('.social-container a').on('click', navActive);
     $('.project-thumbnail').on('click', openModal);
     $('.close').on('click', closeModal);
+    setupSocialIcons();
 });
