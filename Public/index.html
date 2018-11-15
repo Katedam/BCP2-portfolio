@@ -19,6 +19,17 @@
             </div>
         </div>
     </script>
+    <script id="github-repos" type="text/x-handlbars-template">
+        <li>
+            <a href="{{html_url}}">
+                <h3>{{name}}</h3>
+            </a>
+            <p>Language: {{language}}</p>
+            <p>Number of open issues: {{open_issues_count}}</p>
+            <p>Number of times another user has forked this repo: {{forks_count}}</p>
+            <p>Size: {{size}}</p>
+        </li>
+    </script>
 </head>
 <body>
     <span class="icon icon-menu"></span>
@@ -28,6 +39,7 @@
         <ul>
             <li data-content="home"><a href="/">Home</a></li>
             <li data-content="portfolio"><a href="/portfolio">Projects</a></li>
+            <li data-content="repos"><a href="/repos">Repos</a></li>
             <li data-content="social" class="social-container">
                 <a href="/connect">Connect</a>
                 <ul class="social-links">
@@ -53,7 +65,7 @@
             </li>
         </ul>
     </nav>
-    <header class="">
+    <header>
         <img class="hello-img" src="images/hello.png" alt="A message saying, Hello I'm...">
         <img class="header-img" src="images/header-transparent.png" alt="A photo of Kate Dameron next to her name"> 
         <h2><strong>UX Designer, Web Developer & Artist.</strong>       
@@ -69,14 +81,21 @@
             <a class="next">&#10095;</a> -->
         </div>
     </section>
+    <section id="repos-container">
+        <h2>katedam's repo list</h2>
+        <ul></ul>
+    </section>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="vendors/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <script type="text/javascript" src="scripts/models/repos.js"></script>
     <script type="text/javascript" src="Data/project-data-json.json"></script>
     <script type="text/javascript" src="scripts/views/projectView.js"></script>
+    <script type="text/javascript" src="scripts/views/projectReposView.js"></script>
     <script type="text/javascript" src="scripts/models/scripts.js"></script>
     <script type="text/javascript" src="scripts/controllers/indexController.js"></script>
     <script type="text/javascript" src="scripts/controllers/portfolioController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/reposController.js"></script>
     <script typ="text/javascript" src="scripts/controllers/route.js"></script>
 </body>
 </html>
