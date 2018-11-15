@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kate Dameron</title>
-    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="style/main.css">
     <script id="project-template" type="text/x-handlebars-template">
         <img data-project-id={{index}} class="project-thumbnail" src={{thumbnail}} alt={{alt}}>
     </script>
@@ -70,17 +70,13 @@
         </div>
     </section>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="JS/jquery-3.3.1.js"></script>
+    <script src="vendors/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script type="text/javascript" src="Data/project-data-json.json"></script>
-    <script type="text/javascript" src="JS/projectView.js"></script>
-    <script type="text/javascript" src="JS/scripts.js"></script>
-    <script type="text/javascript" src="JS/controllers/indexController.js"></script>
-    <script type="text/javascript" src="JS/controllers/portfolioController.js"></script>
-    <script typ="text/javascript" src="JS/route.js"></script>
-
-    <!-- <script>
-        Project.fetchAll();
-    </script> -->
+    <script type="text/javascript" src="scripts/views/projectView.js"></script>
+    <script type="text/javascript" src="scripts/models/scripts.js"></script>
+    <script type="text/javascript" src="scripts/controllers/indexController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/portfolioController.js"></script>
+    <script typ="text/javascript" src="scripts/controllers/route.js"></script>
 </body>
 </html>
