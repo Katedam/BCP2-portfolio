@@ -1,5 +1,5 @@
 'use strict';
-
+const $nav = $('.nav-menu');
 function initIndexPage() {
     $('.social-links').hide();
     $('#portfolio').hide();
@@ -8,19 +8,19 @@ function initIndexPage() {
 }
 
 function menuShow() {
-    if($('.nav-menu').css('width', '0')) {
-        $('.nav-menu').css('width', '100vw');
+    if($nav.css('width', '0')) {
+        $nav.css('width', '100vw');
         $('.nav-menu ul a').css('display', 'block');
-        $('.nav-menu').addClass('nav-color-change');
+        $nav.addClass('nav-color-change');
         $('.menu-arrow').hide();
         $('.closebtn').show();
     } else {
-        $('.nav-menu').css('width', '0')
+        $nav.css('width', '0')
     }    
 }
 
 function menuHide() {
-    const $nav = $('.nav-menu');
+    
     if ($(window).width() < 800)  {
         $nav.css('width', '0'); 
         $('.icon-menu').show();
@@ -41,7 +41,7 @@ function navActive(event) {
 function showSection() {
     if ($(this).data().content == 'portfolio') {
         $('#portfolio').show();
-        $('.nav-menu').css('width', '0');
+        $nav.css('width', '0');
         $('.icon-menu').on('click', menuShow);
     } else {
         initIndexPage();
