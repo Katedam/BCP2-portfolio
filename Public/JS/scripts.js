@@ -1,5 +1,5 @@
 'use strict';
-
+const $nav = $('.nav-menu');
 function initIndexPage() {
     $('.social-links').hide();
     $('#portfolio').hide();
@@ -8,21 +8,22 @@ function initIndexPage() {
 }
 
 function menuShow() {
-    if($('.nav-menu').css('width', '0')) {
-        $('.nav-menu').css('width', '100vw');
+    if($nav.css('width', '0')) {
+        $nav.css('width', '100vw');
         $('.nav-menu ul a').css('display', 'block');
-        $('.nav-menu').addClass('nav-color-change');
+        $nav.addClass('nav-color-change');
         $('.menu-arrow').hide();
         $('.closebtn').show();
     } else {
-        $('.nav-menu').css('width', '0')
+        $nav.css('width', '0')
     }    
 }
 
 function menuHide() {
-    const $nav = $('.nav-menu');
+    
     if ($(window).width() < 800)  {
         $nav.css('width', '0'); 
+        $('.icon-menu').show();
     } else {
         $nav.css('width', '10%');
         $($nav, 'a').hide();
@@ -32,19 +33,15 @@ function menuHide() {
 }
 
 function navActive(event) {
-    $('.social-links').each(function(index){
-        $(this).delay(1000 * index).fadeIn();
-    });
-    $('.social-links').on('click', function() {
-        $(this).fadeOut(700);
-    });
+    $('.social-links').toggleClass('show');
     event.stopPropagation();
+    event.preventDefault();
 }
 
 function showSection() {
     if ($(this).data().content == 'portfolio') {
         $('#portfolio').show();
-        $('.nav-menu').css('width', '0');
+        $nav.css('width', '0');
         $('.icon-menu').on('click', menuShow);
     } else {
         initIndexPage();
@@ -80,6 +77,12 @@ function closeModal() {
 //     $slideIndex.show();
 // }
 
+function setupSocialIcons() {
+    $('.social-icons').each(function(index) {
+        $(this).css('transition-delay', (index * 0.15) + 's');
+    });
+}
+
 $(document).ready(function() {
     $('.icon-menu').on('click', menuShow);
     $('#menu-arrow').on('click', menuShow);
@@ -87,4 +90,5 @@ $(document).ready(function() {
     $('.social-container a').on('click', navActive);
     $('.project-thumbnail').on('click', openModal);
     $('.close').on('click', closeModal);
+    setupSocialIcons();
 });
