@@ -46,7 +46,10 @@ Project.fetchAll = function (callback) {
     }
 };
 
-
+Project.showNewSlide = function() {
+    console.log(Project.all[2].index);
+    
+}
 
 Project.initPortfolioPage = function() {
     Project.all.forEach(function(project) {

@@ -38,8 +38,8 @@
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    width: 90%;
-    max-width: 1200px;
+    width: 70%;
+    max-width: 800px;
 }
 .close {
     color: white;
@@ -59,10 +59,10 @@
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    /* top: 50%; */
     width: auto;
-    padding: 2em;
-    margin-top: -50px;
+    padding: 0.3em;
+    /* margin-top: -215px; */
     color: white;
     font-weight: bold;
     font-size: 1.5em;
@@ -78,7 +78,13 @@
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+.firstImage {
+    z-index: 1;
+}
 .my-portfolio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     margin: 0 auto;
 }
@@ -107,6 +113,7 @@
     text-align: left;
     width: 100%;
 }
+
 
 /*================== MIN-WIDTH 400px*/
 @media only screen and (min-width: 600px) {

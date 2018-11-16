@@ -52,10 +52,30 @@ function showSection() {
 function openModal() {
     $('#modal-container').css('display', 'block');
     const $projectList = $('.my-portfolio');
-    $projectList.hide();
+    $projectList.fadeIn();
+    $projectList.first().addClass('firstImage');
+    $('.next').on('click', function() {
+        $('.modal').find($('.firstImage')).removeClass('firstImage').next().addClass('firstImage');
+        if ($('.my-portfolio').last().hasClass('firstImage')) {
+            $projectList.first().addClass('firstImage');
+        }
+    });
+    $('.prev').on('click', function() {
+        $('.modal').find($('.firstImage')).removeClass('firstImage').prev().addClass('firstImage');
+        if ($('.my-portfolio').first().hasClass('firstImage')) {
+            $projectList.last().addClass('firstImage');
+        }
+    })
     const id = $(this).data("project-id");
-    $(`#${id}`).fadeIn();
+    // $(`#${id}`).fadeIn();
+    // $('.next').on('click', function() {
+    //     $projectList.fadeOut();
+    //     const nextId = id + 1;
+    //     $(`#${nextId}`).fadeIn();
+    // })
 }
+//put all images in div in a line - use overflow: hidden to hide extras.
+//
 
 function closeModal() {
     $('#modal-container').css('display', 'none');
