@@ -51,27 +51,28 @@ function showSection() {
 
 function openModal() {
     $('#modal-container').css('display', 'block');
-    var $projectList = $('.my-portfolio');
+    var $projectList = $('div.my-portfolio');
     $projectList.fadeIn();
     $projectList.first().addClass('firstProject');
     $('.next').on('click', function() {
-        
-        $('.modal').find($('.firstProject')).removeClass('firstProject')
-            .next().addClass('firstProject');
-        if ($projectList.last().hasClass('firstProject')) {
-            $projectList.last().removeClass('firstProject');
+        if ($('.modal').find($('.firstProject')).next() == $('span')) {
             $projectList.first().addClass('firstProject');
+            $('.modal').find($('.firstProject')).removeClass('firstProject');
+        } else {
+            $('.modal').find($('.firstProject')).removeClass('firstProject')
+                .next().addClass('firstProject');
         }
     });
     $('.prev').on('click', function() {
-        $('.modal').find($('.firstProject')).removeClass('firstProject')
-            .prev().addClass('firstProject');
         if ($projectList.first().hasClass('firstProject')) {
             $projectList.first().removeClass('firstProject');
             $projectList.last().addClass('firstProject');
-        } 
-    })
-    const id = $(this).data("project-id");
+        } else {
+            $('.modal').find($('.firstProject')).removeClass('firstProject')
+            .prev().addClass('firstProject');
+        }     
+    });
+    // const id = $(this).data("project-id");
     // $(`#${id}`).fadeIn();
     // $('.next').on('click', function() {
     //     $projectList.fadeOut();
@@ -79,28 +80,11 @@ function openModal() {
     //     $(`#${nextId}`).fadeIn();
     // })
 }
-//put all images in div in a line - use overflow: hidden to hide extras.
-//
 
 function closeModal() {
     $('#modal-container').css('display', 'none');
     $('.my-portfolio').hide();
 }
-
-// function showSlides(index) {
-//     const $slides = $('.my-portfolio');
-//     if (index > $slides.length) {
-//         slideIndex = 1;
-//     };
-//     if (index < 1) {
-//         slideIndex = $slides.length;
-//     };
-//     $slides.each(function(){
-//         $slides.css('display', 'none');
-//     });
-//     const $slideIndex = $(this);
-//     $slideIndex.show();
-// }
 
 function setupSocialIcons() {
     $('.social-icons').each(function(index) {
