@@ -4,6 +4,7 @@
     const indexController = {};
     indexController.show = () => {
         $('#portfolio').hide();
+        $('#repos-container').hide();
         if ($(window).width() < 800) {
            $('.nav-menu').css('width', '0'); 
         } else {

@@ -46,6 +46,8 @@ Project.fetchAll = function (callback) {
     }
 };
 
+
+
 Project.initPortfolioPage = function() {
     Project.all.forEach(function(project) {
         $('#portfolio').append(project.toHtml('#project-template'));
