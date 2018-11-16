@@ -51,20 +51,25 @@ function showSection() {
 
 function openModal() {
     $('#modal-container').css('display', 'block');
-    const $projectList = $('.my-portfolio');
+    var $projectList = $('.my-portfolio');
     $projectList.fadeIn();
-    $projectList.first().addClass('firstImage');
+    $projectList.first().addClass('firstProject');
     $('.next').on('click', function() {
-        $('.modal').find($('.firstImage')).removeClass('firstImage').next().addClass('firstImage');
-        if ($('.my-portfolio').last().hasClass('firstImage')) {
-            $projectList.first().addClass('firstImage');
+        
+        $('.modal').find($('.firstProject')).removeClass('firstProject')
+            .next().addClass('firstProject');
+        if ($projectList.last().hasClass('firstProject')) {
+            $projectList.last().removeClass('firstProject');
+            $projectList.first().addClass('firstProject');
         }
     });
     $('.prev').on('click', function() {
-        $('.modal').find($('.firstImage')).removeClass('firstImage').prev().addClass('firstImage');
-        if ($('.my-portfolio').first().hasClass('firstImage')) {
-            $projectList.last().addClass('firstImage');
-        }
+        $('.modal').find($('.firstProject')).removeClass('firstProject')
+            .prev().addClass('firstProject');
+        if ($projectList.first().hasClass('firstProject')) {
+            $projectList.first().removeClass('firstProject');
+            $projectList.last().addClass('firstProject');
+        } 
     })
     const id = $(this).data("project-id");
     // $(`#${id}`).fadeIn();
