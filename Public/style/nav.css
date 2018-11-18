@@ -23,7 +23,8 @@
     padding-top: 60px; 
     transition: 0.5s;
 }
-ul {
+.nav-menu ul {
+    margin-top: 10%;
     list-style: none;
 }
 .active {
@@ -42,10 +43,6 @@ ul {
 .nav-menu.show {
     width: 100%;
     background-color: #262037;
-
-}
-.nav-menu.close {
-    width: 0;
 }
 .nav-menu ul {
     opacity: 0;
@@ -54,6 +51,7 @@ ul {
     overflow: hidden;
 }
 .nav-menu.show ul {
+    margin-top: 10%;
     opacity: 1;
     height: auto;
 }
@@ -65,19 +63,20 @@ ul {
     font-size: 3em;
     opacity: 0;
 }
-.show .closebtn {
+.closebtn.show {
     opacity: 1;
 }
 
 @media only screen and (min-width: 800px) {
     .nav-menu {
         display: block;
-        width: 10%;
+        width: 100px;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #f9ddc3ad;
+        background-image: linear-gradient(#fd755470, transparent);
+        background-color: transparent;
         padding-top: 5px;
     }
     .nav-color-change {
@@ -107,7 +106,14 @@ ul {
         transition: 0.3s;
         text-align: center;
     }
+    .nav-menu.close {
+        top: 0;
+        right: 0;
+    }
     .icon {
+        display: none;
+    }
+    .icon-menu {
         display: none;
     }
     a.closebtn {

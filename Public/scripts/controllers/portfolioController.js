@@ -7,7 +7,6 @@
     portfolioController.show = () => {
         $('#portfolio').show();
         $('.nav-menu').addClass('close');
-        $('.icon-menu').show();
     }
     module.portfolioController = portfolioController;
 })(window);
