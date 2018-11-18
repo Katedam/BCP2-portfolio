@@ -6,7 +6,7 @@
     Project.initPortfolioPage();
     portfolioController.show = () => {
         $('#portfolio').show();
-        $('.nav-menu').css('width', '0');
+        $('.nav-menu').addClass('close');
         $('.icon-menu').show();
     }
     module.portfolioController = portfolioController;

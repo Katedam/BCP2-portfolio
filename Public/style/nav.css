@@ -39,12 +39,34 @@ ul {
     transition: 0.3s;
     text-align: center;
 }
-a.closebtn {
+.nav-menu.show {
+    width: 100%;
+    background-color: #262037;
+
+}
+.nav-menu.close {
+    width: 0;
+}
+.nav-menu ul {
+    opacity: 0;
+    transition: opacity 0.5s;
+    height: 0;
+    overflow: hidden;
+}
+.nav-menu.show ul {
+    opacity: 1;
+    height: auto;
+}
+.closebtn {
     text-align: right;
     position: absolute;
     top: 0;
     right: 0.5em;
     font-size: 3em;
+    opacity: 0;
+}
+.show .closebtn {
+    opacity: 1;
 }
 
 @media only screen and (min-width: 800px) {
@@ -76,17 +98,12 @@ a.closebtn {
         /* display: flex;
         justify-content: space-between; */
     }
-    /* .nav-menu li {
-        display: inline-block;
-        padding: 5px;
-        width: 20%;
-    } */
     .nav-menu a {
         padding: 8px 8px 8px 8px;
         text-decoration: none;
         font-size: 40px;
         color: #fd7554;
-        display: none;
+        /* display: none; */
         transition: 0.3s;
         text-align: center;
     }
