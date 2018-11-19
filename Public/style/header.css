@@ -84,9 +84,7 @@ header h2 p {
         margin: 4em auto;
     }
     header h2 {
-        /* position: static; */
         font-size: larger;
-        /* width: 400px; */
     } 
     .header-img {
         margin: 0 auto;

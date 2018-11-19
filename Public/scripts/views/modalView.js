@@ -3,7 +3,7 @@ function openModal() {
     var $projectList = $('div.my-portfolio');
     $projectList.fadeIn();
     const $projectClicked = $(this).data('project-id');
-    $('#' + $projectClicked).addClass('firstProject');
+    $(`#${$projectClicked}`).addClass('firstProject');
     $('.next').on('click', function() {
         const lastId = $('.my-portfolio').last().attr('id');
         const currentId = $('.firstProject').attr('id');
@@ -23,16 +23,17 @@ function openModal() {
             $('.firstProject').removeClass('firstProject');
             $('.my-portfolio').last().addClass('firstProject');
         } else {
-            const $previous = $('.my-portfolio').prev();
-            $('.firstProject').removeClass('.firstProject');
+            const $previous = $('.firstProject').prev();
+            $('.firstProject').removeClass('firstProject');
             $previous.addClass('firstProject');
         }
     });
 }
 
 function closeModal() {
-    $('#modal-container').css('display', 'none');
-    $('.my-portfolio').hide();
+    $('.firstProject').removeClass('firstProject');
+    $('#modal-container').hide();
+    // $('.my-portfolio').hide();
 }
 
 $(document).ready(function() {

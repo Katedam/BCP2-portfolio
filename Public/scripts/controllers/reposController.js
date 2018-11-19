@@ -4,7 +4,7 @@
     const reposController = {};
 
     reposController.show = function() {
-        $('#repos-container').show().siblings().hide();
+        $('#repos-container').show();
         portfolioRepos.request(projectReposView.index);
     };
 
