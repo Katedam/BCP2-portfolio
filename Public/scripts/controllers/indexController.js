@@ -5,14 +5,8 @@
     indexController.show = () => {
         $('#portfolio').hide();
         $('#repos-container').hide();
-        if ($(window).width() < 800) {
-           $('.nav-menu').css('width', '0'); 
-        } else {
-            $('.nav-menu').css('width', '10%');
-            $('.nav-menu a').hide();
-            $('.menu-arrow').show();
-            $('.nav-menu').removeClass('nav-color-change');
-        }
+        $('header').show();
+        $('.header-span-img').show();
     }
     module.indexController = indexController;
 })(window);

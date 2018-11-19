@@ -84,9 +84,7 @@ header h2 p {
         margin: 4em auto;
     }
     header h2 {
-        /* position: static; */
         font-size: larger;
-        /* width: 400px; */
     } 
     .header-img {
         margin: 0 auto;
@@ -100,9 +98,6 @@ header h2 p {
     header {
         margin: 6em auto;
     }
-    .header-img {
-        display: inline;
-    }
     .hello-img {
         margin-left: 10%;
     }
@@ -110,9 +105,14 @@ header h2 p {
         margin-left: 3em;
     }
 }
+@media only screen and (min-width: 845px) {
+    .header-img {
+        display: inline;
+    }
+}
 @media only screen and (min-width: 1000px) {
     .hello-img {
-        margin-left: 15%;
+        margin-left: 25%;
     }
 }
 

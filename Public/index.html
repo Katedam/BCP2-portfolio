@@ -10,7 +10,6 @@
     </script>
     <script id="myModal" type="text/x-handlebars-template">
         <div class="my-portfolio" id={{index}}>
-            <!-- <div class="numbertext">{{index}} / {{length}}</div> -->
             <img src={{thumbnail}} alt={{alt}}>
             <div class="more-info">
                <a href={{url}}>See code</a>
@@ -77,8 +76,8 @@
     <section id="modal-container" class="modal">
         <span class="close cursor">&times;</span>
         <div class="modal-content">
-            <!-- <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a> -->
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
         </div>
     </section>
     <section id="repos-container">
@@ -92,7 +91,8 @@
     <script type="text/javascript" src="Data/project-data-json.json"></script>
     <script type="text/javascript" src="scripts/views/projectView.js"></script>
     <script type="text/javascript" src="scripts/views/projectReposView.js"></script>
-    <script type="text/javascript" src="scripts/models/scripts.js"></script>
+    <script type="text/javascript" src="scripts/views/navView.js"></script>
+    <script type="text/javascript" src="scripts/views/modalView.js"></script>
     <script type="text/javascript" src="scripts/controllers/indexController.js"></script>
     <script type="text/javascript" src="scripts/controllers/portfolioController.js"></script>
     <script type="text/javascript" src="scripts/controllers/reposController.js"></script>

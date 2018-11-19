@@ -17,29 +17,6 @@
     transition-duration: 0.15s;
     transition-property: opacity;
 }
-.show .social-icons {
+.social-icons.show {
     opacity: 1;
 }
-
-/* .social-active {
-    display: block;
-} */
-/*================== MIN-WIDTH 400px*/
-/* @media only screen and (min-width: 400px) {
-    .social-icons {
-        width: 2em;
-    }
-} */
-
-/* ================ MIN-WIDTH 930px */
-/* @media only screen and (min-width: 930px) {
-    .social-links {
-        background-color: transparent;
-        position: fixed;
-        bottom: 0;
-        margin: 0;
-        left: 0;
-        padding: 0;
-        width: 49vw;
-    }
-} */

@@ -1,0 +1,98 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+.modal-content {
+    display: flex;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 75%;
+}
+.close {
+    color: white;
+    position: absolute;
+    top: .75em;
+    right: 1.5em;
+    font-size: 2em;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    width: auto;
+    padding: 15px;
+    color: white;
+    font-size: 2.5em;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.show {
+    padding: 3px;
+    text-align: left;
+    width: 100%;
+}
+.my-portfolio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+}
+.my-portfolio img{
+    width: 100%;
+}
+.more-info {
+    color: #262037b0;
+    top: 0;
+    background-color: white;
+    padding: 0.5em;
+}
+.more-info p{
+    padding-top: 10px;
+}
+.more-info a{
+    text-decoration: none;
+    color: #262037b0;
+}
+.more-info span {
+    position: relative;
+    left: 68%;
+}
+.firstProject {
+    box-sizing: border-box;
+    opacity: 1;
+    box-shadow: 3px 3px 20px #000000a6;
+}
+
+/*================== MIN-WIDTH 400px*/
+@media only screen and (min-width: 600px) {
+    .my-portfolio {
+        width: 65%;
+    }
+}

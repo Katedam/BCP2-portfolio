@@ -20,12 +20,9 @@ Project.prototype.toHtml = function(id) {
     return filledTemplate;   
 }
 
-
-//this sorts and pushes all of the data into new objects in the
 Project.loadAll = function(rawData) {
     rawData.sort(function(a,b){
         return (new Date(a.sort))-(new Date(b.sort));
-        //look up date constructor
     }); 
     rawData.forEach(function(project){
         Project.all.push(new Project(project));
@@ -46,7 +43,10 @@ Project.fetchAll = function (callback) {
     }
 };
 
-
+Project.showNewSlide = function() {
+    console.log(Project.all[2].index);
+    
+}
 
 Project.initPortfolioPage = function() {
     Project.all.forEach(function(project) {

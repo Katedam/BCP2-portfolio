@@ -9,6 +9,7 @@
 }
 #menu-arrow {
     display: none;
+    transition: opacity 0.5s;
 }
 .nav-menu {
     height: 100%;
@@ -23,7 +24,8 @@
     padding-top: 60px; 
     transition: 0.5s;
 }
-ul {
+.nav-menu ul {
+    margin-top: 10%;
     list-style: none;
 }
 .active {
@@ -39,23 +41,56 @@ ul {
     transition: 0.3s;
     text-align: center;
 }
-a.closebtn {
+.nav-menu.show {
+    width: 100%;
+    background-color: #262037;
+}
+.nav-menu ul {
+    opacity: 0;
+    transition: opacity 0.5s;
+    height: 0;
+    overflow: hidden;
+}
+.nav-menu.show ul {
+    margin-top: 10%;
+    opacity: 1;
+    height: auto;
+}
+.nav-menu.close ul {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+.nav-menu.close {
+    display: none;
+}
+.closebtn {
     text-align: right;
     position: absolute;
     top: 0;
     right: 0.5em;
     font-size: 3em;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.nav-menu.show .closebtn {
+    opacity: 1;
+}
+.nav-menu.show #menu-arrow {
+    opacity: 0;
 }
 
+/* ========================min-width 800px */
 @media only screen and (min-width: 800px) {
     .nav-menu {
         display: block;
-        width: 10%;
+        width: 100px;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #f9ddc3ad;
+        background-image: linear-gradient(#fd755470, transparent);
+        background-color: transparent;
         padding-top: 5px;
     }
     .nav-color-change {
@@ -69,31 +104,32 @@ a.closebtn {
         padding: 30px;
         margin-top: 2em;
         transform: rotate(-45deg);
-        /* background-image: linear-gradient(to bottom right, #f9ddc300, #f9ddc300, #fd7554); */
+        cursor: pointer;
+    }
+    .nav-menu.show #menu-arrow {
+        display: none;
     }
     .nav-menu ul {
         list-style: none;
-        /* display: flex;
-        justify-content: space-between; */
     }
-    /* .nav-menu li {
-        display: inline-block;
-        padding: 5px;
-        width: 20%;
-    } */
     .nav-menu a {
         padding: 8px 8px 8px 8px;
         text-decoration: none;
         font-size: 40px;
         color: #fd7554;
-        display: none;
         transition: 0.3s;
         text-align: center;
+    }
+    .nav-menu.close {
+        display: block;
+        width: 100px;
+        top: 0;
+        right: 0;
     }
     .icon {
         display: none;
     }
-    a.closebtn {
+    .icon-menu {
         display: none;
     }
 }
